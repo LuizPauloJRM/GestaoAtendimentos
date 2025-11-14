@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Gestão de Atendimentos</title>
+    <meta charset="UTF-8"/>
+</h:head>
+
+<h:body style="font-family: Arial, sans-serif; background:#f4f6f9; margin:0; padding:0;">
+
+    <div style="max-width: 600px; margin: 60px auto; padding: 30px; 
+                background: white; border-radius: 12px; box-shadow: 0 0 12px #ccc;">
+
+        <h1 style="text-align:center; color:#333;">
+            Gestão de Atendimentos
+        </h1>
+
+        <h:form>
+
+            <p:panel header="Seja bem-vindo!" style="margin-top:20px;">
+
+                <p:messages/>
+
+                <p>
+                    Sistema de demonstração utilizando:
+                </p>
+
+                
+
+                <p:commandButton value="Testar Funcionamento"
+                                 update="@form"
+                                 styleClass="ui-button-primary"
+                                 actionListener="#{indexBean.testar}" />
+
+                <h:outputText value="#{indexBean.mensagem}"
+                              style="display:block; margin-top:20px; font-weight:bold;"/>
+            </p:panel>
+
+        </h:form>
+
+    </div>
+
+</h:body>
+</html>
